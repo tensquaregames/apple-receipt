@@ -15,12 +15,12 @@
 		<dependency>
 			<groupId>org.bouncycastle</groupId>
 			<artifactId>bcpkix-jdk18on</artifactId>
-			<version>1.78</version>
+			<version>1.78.1</version>
 		</dependency>
 		<dependency>
 			<groupId>org.bouncycastle</groupId>
 			<artifactId>bcprov-jdk18on</artifactId>
-			<version>1.78</version>
+			<version>1.78.1</version>
 		</dependency>
 	</dependencies>
 
@@ -29,7 +29,7 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
-				<version>3.11.0</version>
+				<version>3.13.0</version>
 			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
@@ -41,7 +41,7 @@
 							<version>[11,)</version>
 						</requireJavaVersion>
 						<requireMavenVersion>
-							<version>[3.6,)</version>
+							<version>[3.6.3,)</version>
 						</requireMavenVersion>
 						<dependencyConvergence />
 					</rules>
@@ -58,7 +58,7 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-jar-plugin</artifactId>
-				<version>3.3.0</version>
+				<version>3.4.1</version>
 				<configuration>
 					<archive>
 						<manifest>
@@ -70,7 +70,7 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-shade-plugin</artifactId>
-				<version>3.5.1</version>
+				<version>3.5.3</version>
 				<executions>
 					<execution>
 						<phase>package</phase>
@@ -91,6 +91,7 @@
 								<exclude>META-INF/*.DSA</exclude>
 								<exclude>META-INF/*.RSA</exclude>
 								<exclude>META-INF/MANIFEST.MF</exclude>
+								<exclude>META-INF/versions/9/OSGI-INF/MANIFEST.MF</exclude>
 								<exclude>**/module-info.class</exclude>
 								<exclude>**/module-info.java</exclude>
 							</excludes>
