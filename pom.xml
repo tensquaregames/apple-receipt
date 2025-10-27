@@ -8,19 +8,19 @@
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<maven.compiler.release>11</maven.compiler.release>
+		<maven.compiler.release>21</maven.compiler.release>
 	</properties>
 
 	<dependencies>
 		<dependency>
 			<groupId>org.bouncycastle</groupId>
 			<artifactId>bcpkix-jdk18on</artifactId>
-			<version>1.79</version>
+			<version>1.82</version>
 		</dependency>
 		<dependency>
 			<groupId>org.bouncycastle</groupId>
 			<artifactId>bcprov-jdk18on</artifactId>
-			<version>1.78.1</version>
+			<version>1.82</version>
 		</dependency>
 	</dependencies>
 
@@ -29,19 +29,19 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
-				<version>3.13.0</version>
+				<version>3.14.1</version>
 			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-enforcer-plugin</artifactId>
-				<version>3.4.1</version>
+				<version>3.6.2</version>
 				<configuration>
 					<rules>
 						<requireJavaVersion>
-							<version>[11,)</version>
+							<version>[21,)</version>
 						</requireJavaVersion>
 						<requireMavenVersion>
-							<version>[3.6.3,)</version>
+							<version>[3.9,)</version>
 						</requireMavenVersion>
 						<dependencyConvergence />
 					</rules>
@@ -58,7 +58,7 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-jar-plugin</artifactId>
-				<version>3.4.1</version>
+				<version>3.4.2</version>
 				<configuration>
 					<archive>
 						<manifest>
@@ -70,7 +70,7 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-shade-plugin</artifactId>
-				<version>3.5.3</version>
+				<version>3.6.1</version>
 				<executions>
 					<execution>
 						<phase>package</phase>
